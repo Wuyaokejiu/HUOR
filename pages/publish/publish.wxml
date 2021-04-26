@@ -1,0 +1,92 @@
+<view class="top" > 
+  <image class="logo" src="/image/logo.png"></image>
+</view>
+<view class="top1" > 
+  <image class="logo" src="/image/logo.png"></image>
+</view>
+<view class="huodong">创建活动</view>
+<view class="chuangjian">
+  <view>标题
+    <input type="text" bind:input="onTame" placeholder="请输入标题"/>
+  </view>
+  <view>标签
+    <checkbox >运动</checkbox>
+    <checkbox >学术</checkbox>
+    <checkbox >游戏</checkbox>
+    <checkbox >旅游</checkbox>
+  </view>
+  <text>活动开始时间</text>
+    <view class="section">
+      <picker mode="time" value="{{time}}" start="00:00=" end="23:59" bindchange="bindTimeChange">
+        <view class="picker">
+          开始时间: {{time}}
+        </view>
+      </picker>
+    </view>
+    <view>
+    <view class="section">
+      <picker mode="date" value="{{date}}" start="2018-09-01" end="2030-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          开始日期: {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+<view>
+<text>活动结束时间</text>
+<view class="section">
+  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChangeE">
+    <view class="picker">
+      结束时间: {{timeE}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <picker mode="date" value="{{date}}" start="2020-09-01" end="2030-09-01" bindchange="bindDateChangeE">
+    <view class="picker">
+      结束日期: {{dateE}}
+    </view>
+  </picker>
+  </view> 
+</view>
+<view>
+<text>报名截止时间</text>
+<view class="section">
+  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChangeD">
+    <view class="picker">
+      截至时间: {{timeD}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <picker mode="date" value="{{date}}" start="2020-09-01" end="2030-09-01" bindchange="bindDateChangeD">
+    <view class="picker">
+      截止日期: {{dateD}}
+    </view>
+  </picker>
+  </view> 
+</view>
+<view>
+
+  <view>活动时长
+    <input value="{{long}}"type="number" bind:input="onLong" placeholder="请输入活动时长"/>
+  </view>
+</view>
+
+  <view>活动地点
+    <input value="{{place}}"type="text" bind:input="onPlace" placeholder="请输入活动地点"/>
+  </view>
+
+  <view>加入人数
+    <input value="{{member}}"type="number" bind:input="onMember" placeholder="请输入加入人数"/>
+  </view>
+  <view>详细信息
+  <textarea class="ipt" value="{{detail}}" bind:input="onDetail"name="" id="" cols="30" rows="10" placeholder="请输入详细信息"></textarea>
+  <navigator url="/pages/publishneirong/publishneirong?title={{title}}&time={{time}}&date={{date}}&timeE={{timeE}}&dateE={{dateE}}&timeD={{timeD}}&dateD={{dateD}}&long={{long}}&place={{place}}&member={{member}}&detail={{detail}}">
+    <button submit>完成</button>
+  </navigator>
+  
+</view>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/publishing/publishing.wxml-->
+<view class="container">
+    <text class="title">创建活动ing</text>
+    <l-input label="标题" placeholder="请输入活动名字" bind:linblur="onTitle"/>
+    <text>活动类型：</text>
+    <l-radio-group placement="row"
+                   noneChecked="{{false}}"
+                   l-class="radio"
+                   bind:linchange="changeRadio"
+    >
+        <l-radio key="1">学习局</l-radio>
+        <l-radio key="2">电影局</l-radio>
+        <l-radio key="3">美食局</l-radio>
+        <l-radio key="4">社团活动</l-radio>
+    </l-radio-group>
+    <l-input label="加入人数" placeholder="请输入加入人数" type="number" bind:linblur="onNumber"></l-input>
+    <l-input label="地址" placeholder="请输入活动地址" bind:linblur="onAddress"></l-input>
+
+    <l-textarea  placeholder="简单描述一下你的活动..."
+                 maxlength="200"
+                 indicator="{{true}}"
+                 autoHeight="{{true}}"
+                 bind:linblur="onDescription"
+    />
+
+    <l-button bind:tap="onSumbit">发布</l-button>
+
+</view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "s-state-entrance": "/components/state-entrance/index"
+  }
+}

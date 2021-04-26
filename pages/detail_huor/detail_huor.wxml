@@ -1,0 +1,29 @@
+<!--pages/detail_huor/detail_huor.wxml-->
+<view class="page">
+  <view class="nvg_user" >
+    <navigator class="nvg" url="/pages/detail_user/detail_user">
+      <image class="user_profile"  mode="scaleToFill" src="/images/头像.jpg"></image> 
+    </navigator>
+    <view class="head_text">
+      <view class="user_id" user-select="true">用户昵称</view>
+      <view class="publish_time">5分钟前</view>
+    </view>
+  </view>
+  
+  <view class="content">
+      <view style="font-size: 400">标题:{{title}}</view>
+      <view>整活儿时间：{{startTime}}</view>
+      <view>整活儿地点：{{location}}</view>
+      <view>整活儿人数：{{joinNum}}/{{limitNum}}</view>
+      <view>截止到{{stopJoinTime}}停止加入活动</view>
+      <view class="tag" wx:for="{{tag}}" wx:key="i">标签 {{item}}</view> 
+      <scroll-view class="description" scroll-y scroll-top="1">{{description}}</scroll-view>  
+  </view>
+
+  <view class="buttons">
+    <button class="button_like"  form-type="submit" hover-class="button_like_down" bindtap="like">{{like_text}}</button>
+    <button class="button_join" form-type="submit" hover-class="button_join_down" bindtap="join">{{join_text}}</button>
+  </view>
+
+
+</view>

@@ -1,0 +1,45 @@
+<!--components/card/index.wxml-->
+<view catch:tap="onGoToDetail" class="container">
+    <view class="header">
+<!--        <view class="orderId">-->
+<!--            <text>活动号:{{item.orderId}}</text>-->
+<!--        </view>-->
+        <view class="typeText">
+            <text>类型：{{activityTypeText}}</text>
+        </view>
+        <view class="personNum">
+            <text>{{item.joinNum}}/{{item.limitNum}}</text>
+        </view>
+    </view>
+
+    <view class="main">
+        <view class="main-left">
+            <l-icon l-class="sleeve" name="{{activityTypeIcon}}" size="120"></l-icon>
+<!--            <view class="typeText">-->
+<!--                <text>{{activityTypeText}}</text>-->
+<!--            </view>-->
+
+        </view>
+
+        <view class="main-right">
+            <view class="title">
+                <text>{{item.title}}</text>
+            </view>
+            <view class="description">
+                <text>活动描述：{{item.description}}</text>
+            </view>
+        </view>
+
+    </view>
+
+    <view class="bottom">
+        <view class="time">
+            <text>开始时间：{{item.startTime}}</text>
+        </view>
+        <view class="address">
+            <text>活动地点：{{item.address}}</text>
+        </view>
+    </view>
+
+
+</view>

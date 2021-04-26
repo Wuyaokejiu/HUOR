@@ -1,0 +1,27 @@
+/* pages/add/add.wxss */
+.sleeve{
+    font-family: sleeve !important;
+    color: #8a8a8a !important;
+
+}
+.total{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entrance{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text{
+    font-size: 50rpx;
+    text-align: center;
+    color: gray;
+    font-weight: bolder;
+}
+
+.title{
+
+}

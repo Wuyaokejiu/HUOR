@@ -1,0 +1,7 @@
+<!--components/state-entrance/index.wxml-->
+<view catch:tap="onGoToPublish" class="container">
+    <l-icon name="{{icon}}" l-class="sleeve" size="120"></l-icon>
+    <view class="text">
+        <text>{{text}}</text>
+    </view>
+</view>

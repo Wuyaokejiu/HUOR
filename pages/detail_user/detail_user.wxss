@@ -1,0 +1,32 @@
+/* pages/detail_user/detail_user.wxss */
+.page{
+  display: flex;
+  margin: 1rpx;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.user_profile{
+  margin-top: 20%;
+  border-radius: 200rpx;
+  width: 200rpx;
+  height: 200rpx;
+  display: flex;
+  
+}
+
+.info{
+  width: 70%;
+  height:400rpx;
+  margin-top:30rpx;
+  outline: 3rpx solid gray;
+  
+  
+  outline-style: ridge;
+}
+
+.send_msg{
+  margin-top:50rpx;
+  width:50%;
+}

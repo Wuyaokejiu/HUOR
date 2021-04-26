@@ -1,0 +1,5 @@
+<!--pages/mycol/mycol.wxml-->
+<navigator class="" target="" url="../detail_huor/detail_huor" hover-class="my_activities" open-type="navigate">
+  我收藏的活动
+</navigator>
+  

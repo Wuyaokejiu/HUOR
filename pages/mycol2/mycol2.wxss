@@ -1,0 +1,110 @@
+/* pages/home/home.wxss */
+
+  .page{
+    position: relative;
+    display: fixed;
+    height: 1400rpx;
+  }
+
+
+  .swiper-tab {
+   
+  position: relative;
+  table-layout: fixed;
+  display: flex;
+  flex-direction: row;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #777;
+   
+  }
+
+  
+   
+   
+  .tab-item {
+   
+  width: 33.3%;
+  text-align: center;
+  font-size: 15px;
+  color: #777;
+   
+  }
+   
+   
+  .swiper {
+   
+  height: 100%;
+  background: #dfdfdf;
+   
+  }
+   
+   
+  .on {
+   
+  color: cornflowerblue;
+  border-bottom: 5rpx solid cornflowerblue;
+   
+  }
+
+  .fix{
+    position: fixed;
+  }
+
+.swiper__item{
+  display: block;
+  width: 20rem;
+  height: 11rem;
+}
+
+.swiper__id{
+  float: right;
+  padding-right: 20rpx;
+  font-weight: 700;
+}
+
+/* header 部分导航 */
+.header{
+  width: 100%;
+  background-color: #fff;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  height: 64rpx;
+  position: relative;
+  
+}
+.sv__container{
+  width: 18rem;
+  height: 64rpx;
+  white-space: nowrap;
+}
+.sv__item{
+  padding: 14rpx;
+  display: inline-block;
+}
+.sv-manager{
+  padding-left:20rpx;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: center;
+}
+
+.swiper_item{background-color: rgb(190, 236, 226);}
+
+.item_huor{
+  flex-direction: column;
+  height: 300rpx;
+  margin: 10px;
+  border: 1px solid black;
+  background-color: mistyrose;
+  border-radius: 30rpx;
+}
+
+.scr{
+  height: 100%;
+}
+
+.fa{
+  display: flex;
+  align-items: flex-start;
+}

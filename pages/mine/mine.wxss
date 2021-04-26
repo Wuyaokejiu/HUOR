@@ -1,0 +1,27 @@
+/* pages/mine/mine.wxss */
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: rgb(0, 0, 0);
+  background-color: skyblue;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.act{
+  display: flex;
+  flex-direction: row;
+}
+
+.coll{
+  display: flex;
+  flex-direction: row;
+}

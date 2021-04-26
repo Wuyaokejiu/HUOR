@@ -1,0 +1,33 @@
+/* components/state-entrance/index.wxss */
+.sleeve{
+    font-family: sleeve !important;
+    color: #6a6a6a !important;
+    display: flex;
+    height: 130rpx;
+    width: 130rpx;
+    margin-right:50rpx;
+    margin-left: 20rpx;
+    flex: 0 0 auto;
+}
+
+.container{
+    margin-top: 50rpx;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    display:flex;
+    flex-direction: row;
+    /*height: 350rpx;*/
+    width: 690rpx;
+    box-shadow:0px 0px 8px 0px rgba(119,163,149,0.2);
+    border-radius: 4rpx;
+}
+
+.text{
+    font-size: 50rpx;
+    /*font-weight: bolder;*/
+    color: #6a6a6a;
+    padding-top: 30rpx;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*flex: 1;*/
+}

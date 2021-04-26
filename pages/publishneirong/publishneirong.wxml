@@ -1,0 +1,15 @@
+<!--pages/publishneirong/publishneirong.wxml-->
+<view class="top"> 
+  <image class="logo" src="/image/logo.png"></image>
+</view>
+<view>标题：{{title}}</view>
+<view>开始时间：{{time}}</view>
+<view>开始日期：{{date}}</view>
+<view>结束时间：{{timeE}}</view>
+<view>结束日期：{{dateE}}</view>
+<view>报名截止时间：{{timeD}}</view>
+<view>报名截止日期：{{dateD}}</view>
+<view>活动时长：{{long}}</view>
+<view>活动地点：{{place}}</view>
+<view>加入人数：{{member}}</view>
+<view>详细信息：{{detail}}</view>

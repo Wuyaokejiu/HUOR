@@ -1,0 +1,10 @@
+<!--pages/detail_user/detail_user.wxml-->
+<view class="page">
+  <image class="user_profile" src="/images/头像.jpg"></image>
+  <text user-select style="margin-top:30rpx; font-size:22px">nick_name</text>
+  <view class="info">
+    <view>咕咕值：</view>
+    <view>暂时想不到其他</view>
+  </view>
+  <button class="send_msg" type="primary">发消息</button>
+</view>

@@ -1,0 +1,82 @@
+/* pages/shouye/shouye.wxss */
+
+.sleeve {
+    font-family: sleeve !important;
+    color: #157658 !important;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-btn {
+    background-color: #f1f1f1 !important;
+    color: #c4c9d2 !important;
+    font-size: 24rpx !important;
+    font-weight: 400 !important;
+    border-radius: 4rpx !important;
+}
+
+.navigate {
+    height: 100%;
+}
+
+.swiper-tab {
+    display: flex;
+    flex-direction: row;
+    line-height: 80rpx;
+    border-bottom: 2rpx solid #777;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: block;
+    overflow: hidden;
+}
+
+.swiper-item {
+    height: 100%;
+}
+
+.scroll-view {
+    height: 100%;
+}
+
+.empty {
+    display: flex;
+    position: relative;
+    top: 33%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.on {
+    border-bottom: #8a8a8a 2rpx solid;
+}
+
+.tab-item {
+    width: 33.3%;
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+

@@ -1,0 +1,14 @@
+<view class="total">
+    <view class="title">
+        <l-icon name="schedule" l-class="sleeve" size="150"></l-icon>
+        <text class="text">想约啥~</text>
+    </view>
+
+    <view class="container">
+        <view class="entrance">
+            <block wx:for="{{status}}" wx:key="index">
+                <s-state-entrance item="{{item}}"></s-state-entrance>
+            </block>
+        </view>
+    </view>
+</view>
