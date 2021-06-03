@@ -9,13 +9,13 @@ const activityStatusBehavior = Behavior({
         activityTypeText(type){
             switch (type){
                 case ActivityType.STUDY:
-                    return "约学习";
+                    return "Let's Study";
                 case ActivityType.MOVIE:
-                    return "约电影";
+                    return "Watching Movie";
                 case ActivityType.FOOD:
-                    return "约美食";
+                    return "Enjoy Delicacy";
                 case ActivityType.CLUB:
-                    return "社团活动"
+                    return "Club activity"
             }
         },
 

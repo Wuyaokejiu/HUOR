@@ -19,7 +19,18 @@ Page({
     //   status:status,
     // })
   },
-
+  onShow(){
+    app.modeChange(this);
+},
+changeMode:function(){
+    let mode = wx.getStorageSync('mode');
+    if(mode === 'light'){
+        wx.setStorageSync('mode', 'dark')
+    }else{
+        wx.setStorageSync('mode', 'light')
+    }
+    app.modeChange(this);
+},
   attached(){
     console.log(this.data.status)
   }

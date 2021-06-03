@@ -1,11 +1,15 @@
 // pages/set/set.js
+
+let app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    isAuto: false,
+    mode: 'light',
   },
 
   /**
@@ -26,7 +30,35 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let isAuto = wx.getStorageSync('isAuto'),
+      mode = wx.getStorageSync('mode');
+    this.setData({
+      isAuto,
+      mode,
+    })
+    app.modeChange(this);
+  },
+  autoChange: function (e) {
+    console.log(e)
+    let isAuto = e.detail.value;
+    wx.setStorageSync('isAuto', isAuto)
+    isAuto ? app.autoChangeBack() : clearInterval(app.autoTime)
+    this.setData({
+      isAuto
+    })
+  },
+  change: function (e) {
+    clearInterval(app.autoTime);
+    this.setData({
+      isAuto: false,
+    })
+    wx.setStorageSync('isAuto', false)
+    if (e.detail.value) {
+      wx.setStorageSync('mode', 'dark')
+    } else {
+      wx.setStorageSync('mode', 'light')
+    }
+    app.modeChange(this);
   },
 
   /**

@@ -1,0 +1,25 @@
+<!--pages/guanyutuandui/guanyutuandui.wxml-->
+<view class="container">
+    <view class="log">
+        <image class="logo" src="/images/logo.png"></image>
+    </view>
+    <view class="name">
+        整活儿
+    </view>
+    <view class="banBen">
+        Version: 0.1
+    </view>
+    <view class="team">
+        Development team：
+    </view>
+    <text>Team No Bug</text>
+    <view class="lianXiFangShi1">
+        product owner:
+    </view>
+    <text>Yu.long18@student.xjtlu.edu.cn</text>
+    <view class="lianXiFangShi2">
+        scrum master:
+    </view>
+    <text>Luzi.chen18@student.xjtlu.edu.cn</text>
+
+</view>

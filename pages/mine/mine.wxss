@@ -1,11 +1,30 @@
 /* pages/mine/mine.wxss */
-/**index.wxss**/
+.container{
+  margin:0 50rpx 0 50rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 40rpx;
+  
+}
+
 .userinfo {
+  margin-top: 50rpx;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  color: rgb(0, 0, 0);
-  background-color: skyblue;
+  align-items: center;
+  
+  color: #d19016;
+}
+
+.content{
+  margin:100rpx 0rpx 0 0rpx;
+  justify-content: space-between;
+}
+
+.nickname{
+  margin-top:30rpx;
+  font-size:40rpx;
+  font-weight: 500;
 }
 
 .userinfo-avatar {
@@ -16,12 +35,26 @@
   border-radius: 50%;
 }
 
-.act{
+.content_style{
+  margin:25rpx 0 25rpx 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;  
 }
 
-.coll{
-  display: flex;
-  flex-direction: row;
+.item{
+  padding-top: 35rpx;
+  padding-bottom: 35rpx;
+ 
 }
+
+.line{
+  width: 100%;
+  height: 3rpx;
+  background: #5c5344;
+  opacity: 0.5;
+
+}
+
+
+

@@ -1,18 +1,18 @@
 <!--components/card/index.wxml-->
-<view catch:tap="onGoToDetail" class="container">
-    <view class="header">
+<view class="container">
+    <view class="header" catch:tap="onGoToDetail">
 <!--        <view class="orderId">-->
 <!--            <text>活动号:{{item.orderId}}</text>-->
 <!--        </view>-->
         <view class="typeText">
-            <text>类型：{{activityTypeText}}</text>
+            <text>type：{{activityTypeText}}</text>
         </view>
         <view class="personNum">
             <text>{{item.joinNum}}/{{item.limitNum}}</text>
         </view>
     </view>
 
-    <view class="main">
+    <view class="main" catch:tap="onGoToDetail">
         <view class="main-left">
             <l-icon l-class="sleeve" name="{{activityTypeIcon}}" size="120"></l-icon>
 <!--            <view class="typeText">-->
@@ -26,20 +26,24 @@
                 <text>{{item.title}}</text>
             </view>
             <view class="description">
-                <text>活动描述：{{item.description}}</text>
+                <text>description：{{item.description}}</text>
             </view>
         </view>
 
     </view>
 
     <view class="bottom">
+    <view class="left">
         <view class="time">
-            <text>开始时间：{{item.startTime}}</text>
+            <text>start time：{{item.startTime}}</text>
         </view>
         <view class="address">
-            <text>活动地点：{{item.address}}</text>
+            <text>location：{{item.address}}</text>
         </view>
     </view>
-
+    <view class="right">
+        <l-button l-class="unlikeBtn" bind:tap="onUnlike" size="mini" height="50" bgColor="#808080">unlike</l-button>
+    </view>
+</view>
 
 </view>

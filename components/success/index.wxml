@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="inner-container">
+        <image class="img" src="/images/success.png"></image>
+        <text class="text">{{text}}</text>
+        <l-button bind:lintap="onTap" l-class="btn">
+            {{btnText}}
+        </l-button>
+    </view>
+</view>

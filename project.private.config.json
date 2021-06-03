@@ -25,14 +25,14 @@
           "scene": null
         },
         {
-          "name": "pages/detail_huor2/detail_huor2",
-          "pathName": "pages/detail_huor2/detail_huor2",
+          "name": "pages/MyActivity/MyActivity",
+          "pathName": "pages/MyActivity/MyActivity",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/mycol/mycol",
-          "pathName": "pages/home/home",
+          "name": "pages/guanyutuandui/gaunyutuandui",
+          "pathName": "pages/guanyutuandui/guanyutuandui",
           "query": "",
           "scene": null
         },
@@ -43,20 +43,27 @@
           "scene": null
         },
         {
-          "name": "pages/add/add",
-          "pathName": "pages/add/add",
+          "name": "pages/guanyuwomen",
+          "pathName": "pages/guanyutuandui/guanyutuandui",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/test/test",
-          "pathName": "pages/test/test",
+          "name": "pages/publish/publish",
+          "pathName": "pages/publish/publish",
           "query": "",
           "scene": null
         },
         {
           "name": "pages/publishing/publishing",
           "pathName": "pages/publishing/publishing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/publish-success/publish-success",
+          "pathName": "pages/publish-success/publish-success",
+          "query": "",
           "scene": null
         }
       ]

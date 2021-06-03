@@ -1,5 +1,5 @@
 // components/empty/index.js
-import date from "../../miniprogram_npm/lin-ui/common/async-validator/validator/date";
+
 
 Component({
     /**
@@ -8,11 +8,11 @@ Component({
     properties: {
         text: {
             type: String,
-            value: '暂时还没有关注哦~'
+            value: 'There is no collected activity now~'
         },
         btnText:{
             type:String,
-            value:'去看看'
+            value:'ToAdd'
         },
         show: {
             type: Boolean,
@@ -31,37 +31,10 @@ Component({
         currentTab: 0
     },
 
-    lifetimes: {
-        attached() {
-            this._init()
-        }
-    },
-
     /**
      * 组件的方法列表
      */
     methods: {
-        _init() {
-            wx.lin = wx.lin || {};
-            wx.lin.showEmpty = (options) => {
-                const {
-                    btnText = '去看看',
-                    text = '暂时还没有关注哦~',
-                    showBtn = false
-                } = {...options};
-                this.setData({
-                    btnText,
-                    text,
-                    showBtn,
-                    show: true
-                });
-            };
-            wx.lin.hideEmpty = () => {
-                this.setData({
-                    show: false
-                });
-            };
-        },
         onTap(event) {
             let current = 1
             this.setData({

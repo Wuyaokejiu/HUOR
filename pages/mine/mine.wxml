@@ -1,34 +1,80 @@
 <!--pages/mine/mine.wxml-->
-<view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
-      <view class="userinfo-avatar">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    </block>
-    <block wx:else>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class='container {{mode == "light" ? "light":"dark" }}' >
+    <!-- 头部信息 -->
+    <view class="userinfo">
+        <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
+            <view class="userinfo-avatar">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <open-data class="nickname" type="userNickName"></open-data>
+        </block>
+        <block wx:elif="{{!hasUserInfo}}">
+            <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">log in</button>
+            <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">log in</button>
+        </block>
+        <block wx:else>
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+
+
+    <!-- 内容主体 -->
+    <view class="content">
+
+        <!--    <navigator class="content_style" target="" url="/pages/gu/gu" hover-class="navigator-hover" open-type="navigate">-->
+        <!--      <view>Gu-Gu</view>-->
+        <!--      <view>100</view>-->
+        <!--    </navigator>-->
+
+        <navigator class="content_style" target="" url="/pages/MyActivity/MyActivity">
+            <view class="line"></view>
+            <view class="item">My Activities</view>
+            <view class="detail"> 
+                <text></text>
+            </view>
+            <!-- <view>{{totalActivities}}</view> -->
+        </navigator>
+
+        <navigator class="content_style" target="" url="/pages/collectedActivity/collectedActivity">
+            <view class="line"></view>
+            <view class="item">Collected Activities</view>
+            <view class="detail"> 
+                <text></text>
+            </view>
+            <!-- <view class="like" wx:for="{{array}}">{{item.like}}</view> -->
+        </navigator>
+
+        <navigator class="content_style" target="" url="/pages/draft/draft">
+            <view class="line"></view>
+            <view class="item">Draft Box</view>
+            <view class="detail"> 
+                <text></text>
+            </view>
+        </navigator>
+
+        <navigator class="content_style" target="" url="/pages/set/set">
+            <view class="line"></view>
+            <view class="item">Settings</view>
+            <view class="detail">
+                <text></text>
+            </view>
+        </navigator>
+
+        <navigator class="content_style" target="" url="/pages/AboutUs/AboutUs">
+            <view class="line"></view>
+            <view class="item">About</view>
+            <view class="detail"> 
+                <text></text>
+            </view>
+        </navigator>
+
+        <navigator class="content_style" target="" url="/pages/userGuide/userGuide">
+            <view class="line"></view>
+            <view class="item">Guide</view>
+            <view class="detail"> 
+                <text></text>
+            </view>
+        </navigator>
+    </view>
 </view>
-<view class="gu">
-  <navigator class="gu" target="" url="../gu/gu" hover-class="navigator-hover" open-type="navigate">{{msg2}}</navigator>
-  <text class="gugu" src=""></text>
-</view>
-<navigator class="act" target="" url="../myac2/myac2" hover-class="my_activities" open-type="navigate">
-  {{msg1}}<view wx:for="{{array}}">{{item.join}}</view>
-</navigator>
-<navigator class="coll" target="" url="../mycol2/mycol2" hover-class="my_collection" open-type="navigate">
-  {{msg3}}<view class="like" wx:for="{{array}}">{{item.like}}</view>
-</navigator>
-<view bindtap="toDraft">{{msg4}}</view>
-<navigator class="" target="" url="../set/set" hover-class="setting" open-type="navigate">
-  {{msg5}}
-</navigator>
-<navigator class="" target="" url="../help/help" hover-class="help" open-type="navigate">
-  {{msg6}}
-</navigator>

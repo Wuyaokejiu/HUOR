@@ -1,8 +1,0 @@
-<!--pages/myac/myac.wxml-->
-<!--其实没什么用-->
-<navigator class="" target="" url="../detail_huor/detail_huor" hover-class="my_activities" open-type="navigate">
-  我发起的活动
-</navigator>
-<navigator class="" target="" url="../detail_user/detail_user" hover-class="my_activities" open-type="navigate">
-  我参与的活动
-</navigator>

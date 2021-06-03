@@ -3,6 +3,7 @@ import {promisic} from "./utils";
 // import {Token} from "../model/token";
 import {codes} from "../config/exception-config";
 import {HttpException} from "../core/http-exception";
+import {Token} from "../model/token";
 
 class Http{
 
@@ -21,7 +22,7 @@ class Http{
                 method,
                 header:{
                     'content-type':'application/json;charset=utf-8',
-                    // 'authorization':`Bearer ${wx.getStorageSync('token')}`
+                    // 'authorization':`Bearer ${wx.getStorageSync('token')}`,
                     // appkey:config.appkey
                 }
             })

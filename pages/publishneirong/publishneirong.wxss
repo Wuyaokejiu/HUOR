@@ -1,5 +1,0 @@
-/* pages/publishneirong/publishneirong.wxss */
-.top{ width: 100%; height: 100rpx;  
-  display: flex; flex-direction: row;align-items: center;}
-.logo{width: 300rpx; height: 100rpx;margin: 30rpx 250rpx;}
-.ipt{border: 1px solid #ddd;width: 100%; height: 500rpx; padding: 0 10rpx; box-sizing: border-box;}

@@ -1,2 +1,11 @@
 <!--pages/set/set.wxml-->
-<text>pages/set/set.wxml</text>
+<view class='container {{mode == "light" ? "light":"dark" }}'>
+  <label class="itemBox">
+    <view>自动切换黑暗模式</view>
+    <switch bindchange="autoChange" checked="{{isAuto}}" class="switch"></switch>
+  </label>
+  <label class="itemBox" wx:if="{{isAuto == false}}">
+    <view>黑暗模式</view>
+    <switch bindchange="change" checked="{{mode=='dark'}}" class="switch"></switch>
+  </label>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/collectedActivity/collectedActivity.wxml-->
+<view class="container">
+    <text class="text">Collected Activities</text>
+    <scroll-view scroll-y class="scroll-view">
+        <view class="card">
+            <block wx:for="{{collectedActivity}}" wx:key="index">
+                <s-card class="item" item="{{item}}"></s-card>
+            </block>
+        </view>
+    </scroll-view>
+</view>

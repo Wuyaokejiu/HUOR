@@ -65,9 +65,14 @@
 }
 
 
-
-
 .bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.left{
     font-size:25rpx;
     padding-left:30rpx;
     padding-right:30rpx;
@@ -81,6 +86,9 @@
     /*align-items: center;*/
 }
 
+.unlikeBtn{
+    margin-top: 20rpx;
+}
 
 
 .title{

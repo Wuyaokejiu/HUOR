@@ -1,6 +1,6 @@
 {
+  "enablePullDownRefresh": true,
   "usingComponents": {
-    "s-empty": "/components/empty/index",
-    "s-card": "/components/card/index"
+
   }
 }

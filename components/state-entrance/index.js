@@ -7,7 +7,7 @@ Component({
    */
   behaviors: [activityStatusBehavior],
   properties: {
-    item: Number
+    status: Number,
   },
 
   /**
@@ -19,12 +19,12 @@ Component({
   },
 
   observers:{
-    'item':function (item){
-      if (!item){
+    'status':function (status){
+      if (!status){
         return
       }
-      const icon = this.activityTypeIcon(item)
-      const text = this.activityTypeText(item)
+      const icon = this.activityTypeIcon(status)
+      const text = this.activityTypeText(status)
       this.setData({
         icon,
         text
@@ -43,8 +43,9 @@ Component({
    */
   methods: {
     onGoToPublish(event){
+      const status = this.properties.status
       wx.navigateTo({
-        url:`/pages/publishing/publishing`
+        url:`/pages/publishing/publishing?status=${status}`
       })
     }
   }

@@ -1,7 +1,7 @@
 
 const config = {
     // appkey: 'wo0ljc5EiyHgaFRJ',
-    apiBaseUrl:'http://10.8.68.38:8080/'
+    apiBaseUrl:'http://120.79.0.49:8081/'
 }
 
 export {

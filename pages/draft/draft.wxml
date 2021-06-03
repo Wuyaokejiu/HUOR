@@ -1,0 +1,12 @@
+<!--pages/draft/draft.wxml-->
+<view class="container">
+    <text class="text">Draft Box</text>
+    <scroll-view scroll-y class="scroll-view">
+        <view class="card">
+            <block wx:for="{{drafts}}" wx:key="index">
+                <s-draft-card class="item" item="{{item}}"></s-draft-card>
+            </block>
+        </view>
+    </scroll-view>
+</view>
+

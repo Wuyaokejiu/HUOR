@@ -1,6 +1,6 @@
 <!--pages/home/home.wxml-->
 
-<view class='container'>
+<view class='container {{mode == "light" ? "light":"dark" }}' >
     <view class="search">
         <l-button  width="710"
                    shape="square"
@@ -10,30 +10,37 @@
                    icon-color="#C4C9D2"
                    l-class="search-btn"
                    bind:lintap="onGoToSearch">
-            搜索
+            search
         </l-button>
     </view>
 
     <view class="navigate">
         <!--顶部导航栏-->
         <view class="swiper-tab">
-            <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">关注</view>
-            <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">推荐</view>
-            <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">进行中</view>
+            <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">Collected</view>
+            <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchNav">Hot</view>
+            <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="switchNav">Joined</view>
         </view>
 
         <swiper class="swiper"  style="height:{{h}}rpx"  current="{{currentTab}}" duration="200" bindchange="swiperChange">
 
             <swiper-item class="swiper-item">
-                <s-empty class="empty" showBtn show bind:changeCurrent="swiperChange"></s-empty>
+                <s-empty wx:if="{{!collectedActivity[0]}}" class="empty" showBtn show bind:changeCurrent="swiperChange"></s-empty>
+                <scroll-view scroll-y scroll-top="{{top}}" class="scroll-view">
+                    <view class="card">
+                        <block wx:for="{{collectedActivity}}" wx:key="index">
+                            <s-card class="item" item="{{item}}"></s-card>
+                        </block>
+                    </view>
+                </scroll-view>
             </swiper-item>
 
             <swiper-item class="swiper-item">
 
-                    <scroll-view scroll-y scroll-x="false" class="scroll-view">
+                    <scroll-view scroll-y scroll-top="{{top}}" class="scroll-view">
                         <view class="card">
                             <block wx:for="{{activities}}" wx:key="index">
-                                <s-card class="item" item="{{item}}"></s-card>
+                                <s-card bind:unlike="updateActivities" class="item" item="{{item}}"></s-card>
                             </block>
                         </view>
                     </scroll-view>
@@ -41,7 +48,11 @@
             </swiper-item>
 
             <swiper-item class="swiper-item">
-                <s-card class="item" item="{{activities[3]}}"></s-card>
+                <view class="card">
+                    <block wx:for="{{joinedActivity}}" wx:key="index">
+                        <s-card class="item" item="{{item}}"></s-card>
+                    </block>
+                </view>
             </swiper-item>
 
         </swiper>

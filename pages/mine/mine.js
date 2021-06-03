@@ -9,32 +9,15 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'),
-    msg1:"我的活动",
-    msg2:"咕咕值",
-    msg3:"我的收藏",
-    msg4:"草稿箱",
-    msg5:"设置",
-    msg6:"关于",
-    num1:"(3)",
-    num2:"(15)",
-    num3:5,
+    // canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'),
     array:[{
-      join:"(9)",
+      join:9,
     },{
-      like:"(11)",
-    }]
+      like:11,
+    }],
+    totalActivities:9
   },
-  toDraft(){
-    wx.switchTab({
-    url: '../publish/publish',
-    success: (result) => {
-      
-    },
-    fail: () => {},
-    complete: () => {}
-  })
-},
+
   getGuNum(){
      wx.request({
       url: '',
@@ -62,6 +45,24 @@ Page({
     }
 
   },
+
+  onReady: function () {
+
+  },
+  
+  onShow: function () {
+    app.modeChange(this)
+  },
+  changeMode: function () {
+    let mode = wx.getStorageSync('mode');
+    if (mode === 'light') {
+      wx.setStorageSync('mode', 'dark')
+    } else {
+      wx.setStorageSync('mode', 'light')
+    }
+    app.modeChange(this);
+  },
+  
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({

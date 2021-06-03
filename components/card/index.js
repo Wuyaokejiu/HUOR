@@ -47,9 +47,16 @@ Component({
    * 组件的方法列表
    */
   methods: {
+
     onGoToDetail(event){
+      const item = JSON.stringify(this.properties.item)
       wx.navigateTo({
-        url:`/pages/detail_huor2/detail_huor2`
+        url:`/pages/detail_huor/detail_huor?item=${item}`
+      })
+    },
+    onUnlike(event){
+      this.triggerEvent("unlike",{
+        id:this.properties.item.id
       })
     }
   }

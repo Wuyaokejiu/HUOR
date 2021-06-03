@@ -1,1 +1,64 @@
 /* pages/publishing/publishing.wxss */
+
+.container{
+    background-color: #fdfcfc;
+
+
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section{
+    /*border: 2rpx black solid;*/
+    font-size: 35rpx;
+    padding-top: 20rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.picker{
+    border: 2rpx black solid;
+
+}
+
+.end-date{
+    display: flex;
+    flex-direction: row;
+}
+
+.person{
+    display: flex;
+    padding-top: 55rpx;
+
+}
+
+.submit{
+    /* width: 30%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* padding-top: 20rpx; */
+  
+}
+
+.bottom{
+    margin: 20rpx 20%  0rpx 20%  ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.save{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20rpx;
+}
+
+

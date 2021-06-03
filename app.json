@@ -2,23 +2,21 @@
   "pages": [
     "pages/home/home",
     "pages/mine/mine",
-    "pages/publish/publish",
     "pages/add/add",
     "pages/logs/logs",
     "pages/detail_huor/detail_huor",
     "pages/detail_user/detail_user",
-    "pages/publishneirong/publishneirong",
-    "pages/myac/myac",
-    "pages/mycol/mycol",
     "pages/set/set",
-    "pages/help/help",
-    "pages/myac2/myac2",
-    "pages/mycol2/mycol2",
-    "pages/detail_huor2/detail_huor2",
     "pages/mydra/mydra",
     "pages/search/search",
     "pages/test/test",
-    "pages/publishing/publishing"
+    "pages/publishing/publishing",
+    "pages/publish-success/publish-success",
+    "pages/AboutUs/AboutUs",
+    "pages/draft/draft",
+    "pages/collectedActivity/collectedActivity",
+    "pages/MyActivity/MyActivity",
+    "pages/userGuide/userGuide"
   ],
   "tabBar": {
     "color": "#666666",
@@ -28,7 +26,7 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "首页",
+        "text": "Home",
         "iconPath": "images/首页.png",
         "selectedIconPath": "images/首页_chosen.png"
       },
@@ -39,7 +37,7 @@
       },
       {
         "pagePath": "pages/mine/mine",
-        "text": "我的",
+        "text": "Mine",
         "iconPath": "images/我的.png",
         "selectedIconPath": "images/我的_chosen.png"
       }
@@ -48,7 +46,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "整活儿",
+    "navigationBarTitleText": "HUOR",
     "navigationBarTextStyle": "black",
     "onReachBottomDistance": 80
   },
@@ -57,6 +55,8 @@
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "l-button": "/miniprogram_npm/lin-ui/button/index",
-    "l-icon": "/miniprogram_npm/lin-ui/icon/index"
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "s-card": "/components/card/index",
+    "s-empty": "/components/empty/index"
   }
 }

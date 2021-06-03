@@ -1,0 +1,34 @@
+/* components/success/index.wxss */
+/*#157658*/
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200rpx;
+}
+
+.inner-container{
+    width:600rpx;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    color:#333333;
+}
+.img{
+    margin-bottom:40rpx;
+    width:200rpx;
+    height:200rpx;
+}
+
+.text{
+    font-size: 50rpx;
+    margin-bottom: 50rpx;
+    color: #8a8a8a;
+}
+
+.btn{
+    background-color: #8a8a8a !important;
+    border-radius: 6rpx !important;
+}
