@@ -1,6 +1,6 @@
 <!--pages/detail_huor/detail_huor.wxml-->
 <view class="container">
-  <view class="title" style="font-size:x-large; font-weight:600">activity title:{{item.title}}</view>
+  <view class="title" style="font-size:x-large; font-weight:600">{{item.title}}</view>
   <view class="nvg_user" >
     <navigator class="nvg" url="/pages/detail_user/detail_user">
       <image class="user_profile"  mode="scaleToFill" src="/images/头像.jpg"></image>
