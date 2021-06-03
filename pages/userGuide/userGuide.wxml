@@ -1,0 +1,10 @@
+<!--pages/userGuide/userGuide.wxml-->
+
+<swiper class="banner">
+  <swiper-item class="">
+  <image src="/images/home.png"></image> </swiper-item>
+  <swiper-item>
+  <image src="/images/public.png"></image> </swiper-item>
+  <swiper-item>
+  <image src="/images/my.png"></image> </swiper-item>
+</swiper>

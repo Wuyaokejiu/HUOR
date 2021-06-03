@@ -1,0 +1,7 @@
+/* pages/guanyutuandui/guanyutuandui.wxss */
+.logo{width: 300rpx; height: 100rpx;margin: 30rpx 250rpx;margin-top: 300rpx;}
+.name{width: 300rpx; height: 50rpx;margin: 30rpx 330rpx;}
+.banBen{width: 300rpx; height: 50rpx;margin: 30rpx 320rpx;}
+.team{width: 100%; height: 50rpx;margin: 30rpx 33rpx;}
+.lianXiFangShi1{width: 100%; height: 50rpx;margin: 30rpx 33rpx;}
+.lianXiFangShi2{width: 100%; height: 50rpx;margin: 30rpx 33rpx;}

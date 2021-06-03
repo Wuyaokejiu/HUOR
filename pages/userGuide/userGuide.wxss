@@ -1,0 +1,8 @@
+/* pages/userGuide/userGuide.wxss */
+.banner{
+  height: 1400rpx;
+}
+.banner image{
+  height: 1400rpx;
+  width: 100%;
+}

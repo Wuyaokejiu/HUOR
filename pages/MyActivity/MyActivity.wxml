@@ -1,0 +1,44 @@
+<!--pages/MyActivity/MyActivity.wxml-->
+<view class='container {{mode == "light" ? "light":"dark" }}' >
+    <text class="text">My Activities</text>
+    <view class="navigate">
+        <!--顶部导航栏-->
+        <view class="swiper-tab">
+            <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">My Joined</view>
+            <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchNav">My Published</view>
+        </view>
+
+        <swiper class="swiper"  style="height:{{h}}rpx"  current="{{currentTab}}" duration="200" bindchange="swiperChange">
+
+            <swiper-item class="swiper-item">
+                <s-empty wx:if="{{!joinedActivity}}" class="empty"
+                         text="Have not joined any activities"
+                         btnText="go Home"
+                         showBtn show bind:changeCurrent="swiperChange"></s-empty>
+                <scroll-view scroll-y class="scroll-view">
+                    <view class="card">
+                        <block wx:for="{{joinedActivity}}" wx:key="index">
+                            <s-card class="item" item="{{item}}"></s-card>
+                        </block>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+
+            <swiper-item class="swiper-item">
+                <s-empty wx:if="{{!publishedActivity}}" class="empty"
+                         text="Have not published any activities"
+                         btnText="go Publish"
+                         showBtn show bind:changeCurrent="swiperChange"></s-empty>
+                <scroll-view scroll-y class="scroll-view">
+                    <view class="card">
+                        <block wx:for="{{publishedActivity}}" wx:key="index">
+                            <s-card class="item" item="{{item}}"></s-card>
+                        </block>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+
+        </swiper>
+    </view>
+</view>
+

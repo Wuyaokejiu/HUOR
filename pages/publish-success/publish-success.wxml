@@ -1,0 +1,4 @@
+<!--pages/publish-success/publish-success.wxml-->
+<view class="container">
+    <s-success text="{{text}}" btnText="{{btnText}}"></s-success>
+</view>

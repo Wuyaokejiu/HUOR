@@ -9,21 +9,16 @@ Page({
      * 页面的初始数据
      */
     data: {
-        ads: ['/images/广告图片/柴犬.jpg','/images/广告图片/狗.jpeg','/images/广告图片/蜡笔小新.jpg'],
-        indicatorDots: true,
-        vertical: false,
-        autoplay: true,
-        interval: 3000,
-        duration: 1200,
-
         currentTab: 1,
         activities: [],
         winHeight: 0,
-
+        top: 0,
+        collectedActivity:[],
+        joinedActivity:[],
+        unlikeIds:[]
     },
 
-
-    swichNav: function (e) {
+    switchNav:async function (e) {
         // console.log(e);
         var that = this;
         if (this.data.currentTab === e.target.dataset.current) {
@@ -33,6 +28,7 @@ Page({
                 currentTab: e.target.dataset.current,
             })
         }
+        await this.onPullDownRefresh()
     },
 
     swiperChange: function (e) {
@@ -49,11 +45,6 @@ Page({
         })
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-
-
     onLoad:async function (options) {
         const winHeight = await getWindowHeightRpx()
         const h = winHeight - 142
@@ -62,16 +53,51 @@ Page({
         })
         await this.initData()
     },
-
+    onShow(){
+        app.modeChange(this);
+    },
+    changeMode:function(){
+        let mode = wx.getStorageSync('mode');
+        if(mode === 'light'){
+            wx.setStorageSync('mode', 'dark')
+        }else{
+            wx.setStorageSync('mode', 'light')
+        }
+        app.modeChange(this);
+    },
     async initData(){
         const activity = new Activity()
-        const activities = await activity.getAllActivities()
-        console.log(activities)
-
+        let activities = await activity.getAllActivities()
+        const collectedActivity = activities.filter(item => item.collection === 1)
+        const joinedActivity = activities.filter(item => item.joinStatus === 1)
+        console.log(this.data.unlikeIds)
+        for (let id of this.data.unlikeIds){
+            activities = activities.filter(item => item.id !== id)
+        }
+    
+        // console.log(collectedActivity)
+        // console.log(joinedActivity)
+    
         this.setData({
             activities,
+            collectedActivity,
+            joinedActivity,
         })
-        // await activity.postActivity(8)
+    },
+    
+    async updateActivities(event){
+        const ids = this.data.unlikeIds;
+        for (let id of ids){
+            if (event.detail.id === id){
+                return
+            }
+        }
+        const unlikeIds = this.data.unlikeIds
+        unlikeIds[unlikeIds.length] = event.detail.id
+        this.setData({
+            unlikeIds,
+        })
+        await this.initData()
     },
 
     onGoToSearch(event){
@@ -79,5 +105,30 @@ Page({
             url:`/pages/search/search`
         })
     },
+
+    async onPullDownRefresh(event){
+        wx.showNavigationBarLoading()
+        await this.initData()
+        wx.hideNavigationBarLoading() //完成停止加载
+        wx.stopPullDownRefresh() //停止下拉刷新
+    },
+
+    // async onPageScroll(event){
+    //     // console.log(event)
+    //     if (event.detail.scrollTop === 0){
+    //         await this.onPullDownRefresh()
+    //     }
+    // },
+
+    async onTabItemTap(event){
+        const top = 0
+        this.setData({
+            top
+        })
+        if (this.data.top === 0){
+            await this.onPullDownRefresh()
+        }
+    },
+
 
 })

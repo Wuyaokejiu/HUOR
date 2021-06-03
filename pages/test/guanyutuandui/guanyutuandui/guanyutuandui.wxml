@@ -1,0 +1,20 @@
+<!--pages/guanyutuandui/AboutUs.wxml-->
+<view></view>
+<view class="log" > 
+  <image class="logo" src="/image/logo.png"></image>
+</view>
+<view class = "name">
+  整活儿
+</view>
+<view class="banBen">
+    版本 0.1
+</view>
+<view class="team"> 
+  开发团队：Team No Bug 
+</view>
+<view class="lianXiFangShi1">
+  联系方式1: Yu.long18@student.xjtlu.edu.cn
+</view>
+<view class="lianXiFangShi2">
+    联系方式2: Luzi.chen18@student.xjtlu.edu.cn
+</view>

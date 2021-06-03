@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "s-success": "/components/success/index"
+  }
+}

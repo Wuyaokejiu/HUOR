@@ -1,4 +1,4 @@
-// pages/guanyutuandui/AboutUs.js
+// pages/publish/publish.js
 Page({
 
   /**

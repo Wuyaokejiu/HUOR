@@ -1,0 +1,118 @@
+/* pages/detail_huor/detail_huor.wxss */
+.container{
+  
+
+  display: flex;
+  flex-direction: column;
+  margin-left:25rpx;
+  width:700rpx;
+  height: 1200rpx;
+  font-size: 35rpx;
+}
+
+.title{
+  align-items: center;
+}
+
+.nvg{
+  border-radius: 80rpx;
+}
+
+.nvg_user{
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  
+}
+
+.user_profile{   /*用户头像*/
+  margin-left: 10rpx;
+  display: inline-block;
+  align-items: flex-start;
+  width: 100rpx;
+  height: 120%;
+  border-radius: 100rpx;
+}
+
+.user_id{
+  padding-left: 10rpx;
+  font-size: large;
+  align-content: center;
+  font-weight: 400;
+  height: 50%;
+  width: 100%;
+}
+
+.publish_time{
+  font-weight: 300;
+  font-size:medium;
+  height: 50%;
+  opacity: 0.7;
+  width:100%;
+}
+
+.content{
+  font-weight:400;
+  flex-direction: column;
+  height: 70%;
+  padding-top: 50rpx;
+}
+
+.description{
+  padding-top: 10rpx;
+  width:700rpx;
+  outline-color: gray;
+  outline-style: ridge;
+  outline-width: 1rpx;
+  background-color: #F5F5F5;
+  height: 55%;
+  margin-top:30rpx;
+}
+
+.section{
+  padding-top: 30rpx;
+  margin-left: 30rpx;
+}
+
+.line{
+  width: 100%;
+  height: 3rpx;
+  background: #5c5344;
+  opacity: 0.4;
+}
+
+.tag{
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  height:5%;
+  width:inherit;
+  justify-content: center;
+  align-items: center;
+  bottom: 50rpx;
+  position: fixed;
+}
+
+.button_like{
+  background-color: rgb(107, 177, 138);
+  
+}
+
+.button_like_down{
+  background-color: rgb(109, 209, 114);
+}
+
+.button_join{
+background-color: rgb(231, 82, 65);
+
+}
+
+.button_join_down{
+  background-color: orangered;
+  
+}

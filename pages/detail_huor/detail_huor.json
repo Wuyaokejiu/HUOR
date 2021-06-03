@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "enablePullDownRefresh" : true,
+  "navigationBarTitleText":"activity detail",
+  "backgroundColor" : "#d8d8d8"
+}

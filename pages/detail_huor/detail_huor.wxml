@@ -1,0 +1,38 @@
+<!--pages/detail_huor/detail_huor.wxml-->
+<view class="container">
+  <view class="title" style="font-size:x-large; font-weight:600">activity title:{{item.title}}</view>
+  <view class="nvg_user" >
+    <navigator class="nvg" url="/pages/detail_user/detail_user">
+      <image class="user_profile"  mode="scaleToFill" src="/images/头像.jpg"></image>
+    </navigator>
+      <text>nick name</text>
+    <view style="margin-left:20rpx">
+      <view class="user_id" user-select="true"></view>
+      <view class="publish_time">create time:{{displayTime}}</view>
+    </view>
+  </view>
+  
+  <view class="content">
+      <view class="line2"></view>
+      <view class="section">Start time: {{item.startTime}}</view>
+      <view class="line"></view>
+      <view class="section">Location: {{item.address}}</view>
+      <view class="line"></view>
+      <view class="section">Numbers of people: {{item.joinNum}}/{{item.limitNum}}</view>
+      <view class="line"></view>
+      <view class="section">Close time:{{item.startTime}}</view>
+<!--      <view>Tags:-->
+<!--        <view class="tag" wx:for="{{tag}}" wx:key="i">{{item}}</view>-->
+<!--      </view>   -->
+      <scroll-view class="description" scroll-y scroll-top="1">activity description:{{item.description}}</scroll-view>
+  </view>
+
+  <l-button open-type="share">分享</l-button>
+
+  <view class="buttons">
+    <button class="button_like"  form-type="submit" hover-class="button_like_down" data-like="{{like}}" bindtap="like">{{like_text}}</button>
+    <button class="button_join" form-type="submit" hover-class="button_join_down" data-join="{{join}}" bindtap="join">{{join_text}}</button>
+  </view>
+
+
+</view>

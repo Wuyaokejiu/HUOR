@@ -1,4 +1,4 @@
-// pages/guanyutuandui/AboutUs.js
+// pages/userGuide/userGuide.js
 Page({
 
   /**

@@ -1,10 +1,14 @@
-// pages/guanyutuandui/AboutUs.js
+// pages/publish-success/publish-success.js
+import {formatTime} from "../../utils/util";
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    text:"publish successfully",
+    btnText:"Home",
 
   },
 
@@ -12,7 +16,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const date = formatTime(new Date())
+    console.log(new Date())
+    console.log(date)
   },
 
   /**

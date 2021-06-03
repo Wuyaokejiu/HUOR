@@ -1,28 +1,66 @@
 <!--pages/publishing/publishing.wxml-->
-<view class="container">
-    <text class="title">创建活动ing</text>
-    <l-input label="标题" placeholder="请输入活动名字" bind:linblur="onTitle"/>
-    <text>活动类型：</text>
-    <l-radio-group placement="row"
-                   noneChecked="{{false}}"
-                   l-class="radio"
-                   bind:linchange="changeRadio"
-    >
-        <l-radio key="1">学习局</l-radio>
-        <l-radio key="2">电影局</l-radio>
-        <l-radio key="3">美食局</l-radio>
-        <l-radio key="4">社团活动</l-radio>
-    </l-radio-group>
-    <l-input label="加入人数" placeholder="请输入加入人数" type="number" bind:linblur="onNumber"></l-input>
-    <l-input label="地址" placeholder="请输入活动地址" bind:linblur="onAddress"></l-input>
+<view class='container {{mode == "light" ? "light":"dark" }}'>
+    <text class="title">Publishing</text>
+    <l-input label="title" placeholder="please input activity title"
+             bind:linblur="onTitle" />
+<!--    <text>activity type：</text>-->
+<!--    <l-radio-group noneChecked="{{false}}"-->
+<!--                   l-class="radio"-->
+<!--                   bind:linchange="changeRadio"-->
+<!--    >-->
+<!--        <l-radio key="1">for study</l-radio>-->
+<!--        <l-radio key="2">for watching movie</l-radio>-->
+<!--        <l-radio key="3">for food</l-radio>-->
+<!--        <l-radio key="4">for club activities</l-radio>-->
+<!--    </l-radio-group>-->
+    <view class="section">
+        <view>
+            <picker mode="date" value="{{date}}" start="2018-09-01" end="2030-09-01" bindchange="changeStartDate">
+                <view class="picker">
+                    开始日期: {{startDate}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="section">
+        <picker mode="time" value="{{time}}" start="00:00=" end="23:59" bindchange="changeStartTime">
+            <view class="picker">
+                开始时间: {{startTime}}
+            </view>
+        </picker>
+    </view>
 
-    <l-textarea  placeholder="简单描述一下你的活动..."
+    <view class="section">
+        <picker mode="date" value="{{date}}" start="2020-09-01" end="2030-09-01" bindchange="changeEndDate">
+            <view class="picker">
+                结束日期: {{endDate}}
+            </view>
+        </picker>
+    </view>
+    <view>
+        <view class="section">
+            <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="changeEndTime">
+                <view class="picker">
+                    结束时间: {{endTime}}
+                </view>
+            </picker>
+        </view>
+    </view>
+
+
+    <l-input label="person" placeholder="please input limit number of person" type="number"
+             bind:linblur="onNumber"></l-input>
+    <l-input label="address" placeholder="please input activity address" bind:linblur="onAddress"></l-input>
+
+    <l-textarea  placeholder="please describe your activity content..."
                  maxlength="200"
                  indicator="{{true}}"
                  autoHeight="{{true}}"
-                 bind:linblur="onDescription"
+                 bind:lininput="onDescription"
     />
 
-    <l-button bind:tap="onSumbit">发布</l-button>
-
+</view>
+<view class="bottom">
+    <l-button l-class="submit" bind:tap="onSumbit">Submit</l-button>
+    <l-button l-class="save" bind:tap="onSave">Save</l-button>
 </view>
