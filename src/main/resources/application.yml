@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: test
+  datasource:
+    url: jdbc:mysql://localhost:3306/huor?characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+missyou:
+  security:
+    jwt-key: 7777777yue
+    token-expired-in: 86400000
+
+wx:
+  appid: wx54e8b549b782f969
+  appsecret: 38a90427cfc42283d2aa78e21ca4a4b5
+  code2session: https://api.weixin.qq.com/sns/jscode2session?appid={0}&secret={1}&js_code={2}&grant_type=authorization_code
